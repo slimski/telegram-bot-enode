@@ -52,13 +52,13 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    print "hello"
+    print("hello")
     bot.reply_to(message, "Ты можешь узнать меню по команде /menu")
 
 @bot.message_handler(commands=['menu'])
 def send_menu(message):
     # bot.reply_to(message, "Howdy, how are you doing?")
-    print "sending menu"
+    print("sending menu")
     get_html()
     menu = parse_user_datafile_bs('test.html')
     print menu
@@ -70,7 +70,7 @@ def send_menu(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    print "print echo"
+    print("print echo")
     bot.reply_to(message, message.text)
 
 
