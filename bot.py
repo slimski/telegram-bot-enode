@@ -13,7 +13,7 @@ def parse_user_datafile_bs(filename):
 
     soup = BeautifulSoup(text, convertEntities=BeautifulSoup.HTML_ENTITIES)
     date_text = soup.find('div', {'class': 'datebox'}).find('b').text
-    print date_text
+    print(date_text)
     result = {}
     result['title'] = date_text
 
