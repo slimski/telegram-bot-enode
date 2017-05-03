@@ -61,7 +61,7 @@ def send_menu(message):
     print("sending menu")
     get_html()
     menu = parse_user_datafile_bs('test.html')
-    print menu
+    print(menu)
     bot.reply_to(message, menu['title'])
     for complex in menu['complexes']:
         bot.reply_to(message, complex)
